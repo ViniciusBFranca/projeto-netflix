@@ -4,6 +4,7 @@ let video = document.querySelector(".video")
 let botao = document.querySelector(".link-info")
 let modal = document.querySelector(".modal")
 let audio = document.querySelector(".audio")
+let assistir = document.querySelector(".link-assistir")
 
 botaoSom.addEventListener("click", ligaSom)
 
@@ -22,7 +23,7 @@ function esconderModal(){
     modal.style.display = "none"
 }
 
-window.addEventListener("click", tocarAudio)
+assistir.addEventListener("click", tocarAudio)
 
 function tocarAudio(){
     audio.play()
