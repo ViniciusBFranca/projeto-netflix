@@ -3,11 +3,12 @@ let botaoSom = document.querySelector(".botao-som")
 let video = document.querySelector(".video")
 let botao = document.querySelector(".link-info")
 let modal = document.querySelector(".modal")
+let audio = document.querySelector(".audio")
 
 botaoSom.addEventListener("click", ligaSom)
 
 function ligaSom(){
-    video.muted = false
+    video.muted = !video.muted
 }
 
 botao.addEventListener("click", mostrarModal)
@@ -19,4 +20,10 @@ function mostrarModal(){
 
 function esconderModal(){
     modal.style.display = "none"
+}
+
+window.addEventListener("click", tocarAudio)
+
+function tocarAudio(){
+    audio.play()
 }
